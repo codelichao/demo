@@ -9,4 +9,6 @@ import com.lc.entity.User;
  * @date 2020/12/27 15:24
  */
 public interface UserService extends IService<User> {
+
+    User login(Long account,String password);
 }

@@ -18,12 +18,12 @@ public class User implements Serializable {
     @TableId(value = "id",type = IdType.AUTO)
     private int id ;
 
-    private String account;
-
     private String password;
 
     private String truename;
 
-    private int telephone;
+    private Long telephone;
+
+    private String role;
 
 }
