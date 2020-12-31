@@ -34,7 +34,7 @@ public class RecordController {
 
     @ApiOperation(value="删除消费记录")
     @DeleteMapping("/remove")
-    public void remove(@Param("id") Integer id){
+    public void remove(Integer id){
         recordService.removeById(id);
     }
 

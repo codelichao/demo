@@ -30,7 +30,7 @@ public class UserController {
 
     @ApiOperation(value="删除用户")
     @DeleteMapping("/remove")
-    public void remove(@Param("id") Long id) {
+    public void remove(Long id) {
         userService.removeById(id);
     }
 

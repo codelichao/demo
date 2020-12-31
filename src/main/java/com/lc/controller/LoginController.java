@@ -37,7 +37,7 @@ public class LoginController {
 
     @ApiOperation(value="登录")
     @GetMapping("/login")
-    public User login(@Param("telephone") Long telephone,@Param("password") String password){
+    public User login(Long telephone,String password){
         User user=userService.login(telephone, password);
         if(user==null){
             return null;

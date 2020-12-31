@@ -3,7 +3,7 @@ server:
 spring:
   datasource:
     name: test
-    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowMultiQueries=true&serverTimezone=UTC
+    url: jdbc:mysql://150.158.185.168:3306/test?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowMultiQueries=true&serverTimezone=UTC
     username: root
     password: root
     # 使用druid数据源
