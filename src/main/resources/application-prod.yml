@@ -1,0 +1,39 @@
+spring:
+  datasource:
+
+    # 默认数据源
+    primary: master
+    dynamic:
+      druid:
+        async-init: true
+        filters: stat,wall,slf4j
+        initial-size: 1
+        max-active: 20
+        max-wait: 60000
+        min-evictable-idle-time-millis: 300000
+        min-idle: 3
+        pool-prepared-statements: true
+        test-on-borrow: false
+        test-on-return: false
+        test-while-idle: true
+        time-between-eviction-runs-millis: 60000
+      datasource:
+        master:
+          url: jdbc:mysql://150.158.185.168/test?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
+          username: root
+          password: root
+          driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    platform: mysql
+
+#是否打开swagger
+custom:
+  swagger-open: true
+  #空闲会话超时时间（毫秒）
+  session_timeout: 1800000
+
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: isDeleted

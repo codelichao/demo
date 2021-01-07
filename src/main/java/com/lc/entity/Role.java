@@ -7,15 +7,13 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-public class User implements Serializable {
+public class Role implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "id",type = IdType.AUTO)
+    @TableId(value = "id", type = IdType.AUTO)
     private int id;
 
-    private String username;
-
-    private String password;
+    private String rolename;
 
 }

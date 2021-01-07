@@ -1,5 +1,6 @@
 package com.lc.entity;
 
+
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
@@ -7,15 +8,16 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-public class User implements Serializable {
+public class UserRole implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private final long serialVersionUID=1L;
 
     @TableId(value = "id",type = IdType.AUTO)
     private int id;
 
-    private String username;
+    private int userId;
 
-    private String password;
+    private int roleId;
+
 
 }

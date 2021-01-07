@@ -1,4 +1,4 @@
-package com.lc;
+package com.lc.config;
 
 import lombok.Value;
 import org.springframework.context.annotation.Bean;
