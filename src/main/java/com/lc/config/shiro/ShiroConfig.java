@@ -45,6 +45,10 @@ public class ShiroConfig {
         Map<String, String> map = new HashMap<>();
         //登出
         map.put("/logout", "logout");
+        map.put("/swagger-ui.html", "anon");
+        map.put("/swagger-resources/**", "anon");
+        map.put("/v2/api-docs", "anon");
+        map.put("/webjars/springfox-swagger-ui/**", "anon");
         //对所有用户认证
         map.put("/**", "authc");
         //登录

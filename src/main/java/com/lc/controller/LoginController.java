@@ -1,6 +1,8 @@
 package com.lc.controller;
 
 import com.lc.entity.User;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
@@ -12,22 +14,28 @@ import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.apache.shiro.subject.Subject;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.websocket.server.PathParam;
 
 @RestController
 @Slf4j
+@Api(tags = "登录")
 public class LoginController {
 
+    @ApiOperation(value = "登录")
     @GetMapping("/login")
-    public String login(User user) {
-        if (StringUtils.isEmpty(user.getUsername()) || StringUtils.isEmpty(user.getPassword())) {
+    public String login(String username,String password) {
+        if (StringUtils.isEmpty(username) || StringUtils.isEmpty(password)) {
             return "请输入用户名和密码！";
         }
         //用户认证信息
         Subject subject = SecurityUtils.getSubject();
         UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(
-                user.getUsername(),
-                user.getPassword()
+                username,
+                password
         );
         try {
             //进行验证，这里可以捕获异常，然后返回对应信息
