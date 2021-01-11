@@ -1,4 +1,4 @@
-package com.lc.demo1;
+package com.lc.thread.ThreadAndRunnable;
 
 //创建线程方式1：继承Thread类，重写run()方法，调用start并开启线程
 

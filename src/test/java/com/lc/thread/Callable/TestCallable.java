@@ -1,6 +1,5 @@
-package com.lc.demo2;
+package com.lc.thread.Callable;
 
-import com.lc.demo1.TestThread2;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;

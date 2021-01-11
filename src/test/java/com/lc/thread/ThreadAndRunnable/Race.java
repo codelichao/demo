@@ -1,4 +1,4 @@
-package com.lc.demo1;
+package com.lc.thread.ThreadAndRunnable;
 
 //模拟龟兔赛跑
 public class Race implements Runnable {

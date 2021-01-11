@@ -1,4 +1,4 @@
-package com.lc.demo1;
+package com.lc.thread.ThreadAndRunnable;
 
 import org.apache.commons.io.FileUtils;
 

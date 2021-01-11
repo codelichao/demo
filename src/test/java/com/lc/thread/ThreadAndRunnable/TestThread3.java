@@ -1,4 +1,4 @@
-package com.lc.demo1;
+package com.lc.thread.ThreadAndRunnable;
 
 //创建线程方式2：实现runnable接口，重写run（）方法，执行线程需要丢入runnable接口实现类，调用start（）方法
 public class TestThread3 implements Runnable{

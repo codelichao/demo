@@ -1,14 +1,11 @@
-package com.lc.demo1;
+package com.lc.thread.state;
 
-//多个线程同时操作同一个对象
-//火车票
 
-//发现问题：多个线程操作同一个资源的情况下，线程不安全，数据紊乱
-public class TestThread4 implements Runnable{
+//模拟网络延时：放大问题得发生性
+public class TestSleep implements Runnable{
 
     //票数
     private int ticketNums = 10;
-
 
     @Override
     public void run() {
@@ -18,7 +15,7 @@ public class TestThread4 implements Runnable{
             }
             //模拟延时
             try {
-                Thread.sleep(200);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -27,7 +24,7 @@ public class TestThread4 implements Runnable{
     }
 
     public static void main(String[] args) {
-        TestThread4 ticket = new TestThread4();
+        TestSleep ticket = new TestSleep();
         new Thread(ticket,"小明").start();
         new Thread(ticket,"老师").start();
         new Thread(ticket,"黄牛").start();
